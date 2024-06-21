@@ -21,7 +21,8 @@
 
 Python script with a simple GUI that uploads any number of images from chosen directories to Redbubble.
 Uses the Chrome webdriver to interact with Redbubble. 
-The webdriver and Chrome profile will automatically be created and saved upon running the script
+The webdriver and Chrome profile will automatically be created and saved upon running the script.
+As the original creater is not maintaining it, I updated it. Tested and works on Linux Environment. Windows/Mac not tested.
 
 <!-- GETTING STARTED -->
 
@@ -48,7 +49,12 @@ Clone the repository
    ```
    python uploader.py
    ```
-- Add a file 'tags.txt' to the directory with your images to specify the tags that will be uploaded with each image in that directory.
+- run
+   ```
+   pip install undetected_chromedriver
+   ```
+- Add a file 'tags.txt' to the directory with your images (on linux just write ```ls > tags.txt```) to specify the tags that will
+  be uploaded with each image in that directory. Please note the syntax. Filename, Title, Tags, Description. (Seperated by new line)
   If a tags.txt isn't supplied, the tags will be generated from the image's filename
 
 - A small GUI will appear, select directories with your images and click upload. 
